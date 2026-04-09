@@ -9,7 +9,7 @@ export default function SellerProducts() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/api/products/my-products", {
+    fetch("https://reshopy-backend.onrender.com/api/products/my-products", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

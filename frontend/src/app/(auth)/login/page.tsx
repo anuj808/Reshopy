@@ -68,7 +68,7 @@ export default function LoginPage() {
 
       // 🔌 Backend call
       const response = await fetch(
-        "http://localhost:5000/api/auth/phone-login",
+        "https://reshopy-backend.onrender.com/api/auth/phone-login",
         {
           method: "POST",
           headers: {

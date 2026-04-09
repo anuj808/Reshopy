@@ -7,7 +7,7 @@ export default function UserDashboard() {
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://reshopy-backend.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

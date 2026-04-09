@@ -9,7 +9,7 @@ export default function AdminDashboard() {
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : "";
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/products", {
+    fetch("https://reshopy-backend.onrender.com/api/admin/products", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ export default function AdminDashboard() {
   }, []);
 
   const approve = async (id: string) => {
-    await fetch(`http://localhost:5000/api/admin/approve/${id}`, {
+    await fetch(`https://reshopy-backend.onrender.com/api/admin/approve/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -31,7 +31,7 @@ export default function AdminDashboard() {
   };
 
   const reject = async (id: string) => {
-    await fetch(`http://localhost:5000/api/admin/reject/${id}`, {
+    await fetch(`https://reshopy-backend.onrender.com/api/admin/reject/${id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

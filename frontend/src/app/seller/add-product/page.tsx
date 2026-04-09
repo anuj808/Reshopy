@@ -7,11 +7,11 @@ export default function AddProduct() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
-    
+
   const handleSubmit = async () => {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:5000/api/products", {
+    const res = await fetch("https://reshopy-backend.onrender.com/api/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
