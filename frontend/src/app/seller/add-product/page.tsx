@@ -11,7 +11,7 @@ export default function AddProduct() {
   const handleSubmit = async () => {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("https://reshopy-backend.onrender.com/api/products", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

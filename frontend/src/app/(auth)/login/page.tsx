@@ -67,8 +67,7 @@ export default function LoginPage() {
       const firebaseUser = res.user;
 
       // 🔌 Backend call
-      const response = await fetch(
-        "https://reshopy-backend.onrender.com/api/auth/phone-login",
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/phone-login`,
         {
           method: "POST",
           headers: {
